@@ -1,0 +1,348 @@
+<html>
+    <head>
+        <!--Bootstrap-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!--bootstrap date picker-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+        
+        <!--Custom style and script -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="technovert-script.js"></script>
+        
+    </head>
+    <body>
+        <div class="whole-content">
+        <!-- side bar -->
+        <div id="side-navbar" class="sidenav">
+            <div>
+            <span class="logo">Technovert</span>
+            </div>
+            <div>
+            <a  href="#"> <span class="glyphicon glyphicon-home"></span>Home</a>
+            <a href="#"> <span class="glyphicon glyphicon-tasks"></span> Workflow</a>
+            <a href="#"> <span class="glyphicon glyphicon-stats"></span> Statistics</a>
+            <a href="#"> <span class="glyphicon glyphicon-calendar"></span> Calendar</a>
+            <a href="#"> <span class="glyphicon glyphicon-user"></span> Users</a>
+            <a href="#" > <span class="glyphicon glyphicon-cog"></span> Settings</a>
+            </div>
+          </div>
+          <!-- main content-->
+          <div id="main">
+              <div class="topbar">
+                <div id="toggle-bar">
+                    
+                <div id="togglebars">
+                    <span class="glyphicon glyphicon-triangle-left"></span> 
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </div>
+                <img src="images/search.svg" alt="search">
+                </div>
+                <div>
+                <span class="btn btn-primary">+ Add Project</span>
+                <img src="images/mail.svg" alt="mail">
+                <img src="images/notifications.svg" alt="notifications">
+                <img src="images/account.svg" alt="">
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </div>
+            </div>
+            <div class="menu-bar">
+                    <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">HOME</a></li>
+                            <li><a data-toggle="tab" href="#work">WORK</a></li>
+                            <li><a data-toggle="tab" href="#messages">MESSAGES</a></li>
+                          </ul>
+            </div>
+            <!--nav tabs content -->
+            <div class="container-fluid m-0">
+                <div class="tab-content ">
+                    <div id="home" class="tab-pane fade in active col-sm-8">
+                        <div class="col-sm-9">
+                        <!-- accordion 1-->
+                        <button class="accordion"><span><b>Profile</b></span></button>
+                        <div class="panel">
+                            <div class="container">
+                                <!-- step wizard for form-->
+                                    <div class="stepwizard">
+                                        <div class="progress-form">
+                                            <div class="progress" id="progress-bar-1">
+                                                    <div id="personal-details-progress-bar-form" class="progress-bar" role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    </div>
+                                                </div>
+                                                <div class="progress" id="progress-bar-2">
+                                                    <div id="job-info-progress-bar-form" class="progress-bar" role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="stepwizard-row setup-panel">
+                                            <!-- step 1-->
+                                            <div class="stepwizard-step">
+                                                <a href="#step-1" type="button" value="#step-2" class="btn btn-primary btn-circle">1</a>
+                                                <p><b>PERSONAL DETAILS</b></p>
+                                            </div>
+                                            <!-- step 2-->
+                                            <div class="stepwizard-step">
+                                                <a href="#step-2" type="button" class="btn btn-default btn-circle disabled" disabled="disabled">2</a>
+                                                <p><b>JOB INFO</b></p>
+                                            </div>
+                                            <!-- step 3-->
+                                            <div class="stepwizard-step">
+                                                <a href="#step-3" type="button" class="btn btn-default btn-circle disabled" disabled="disabled">3</a>
+                                                <p><b>SUMMARY</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- step whole form content-->
+                                    <form role="form" id="form-personal">
+                                        <!-- step 1 content-->
+                                        <div class="row setup-content" id="step-1">
+                                            <div class="row">
+                                                    <div class="form-group col-sm-6">
+                                                        <label class="control-label">First Name</label>
+                                                        <input id="first-name" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label class="control-label">Middle Name</label>
+                                                        <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Middle Name" />
+                                                    </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="form-group col-sm-6">
+                                                        <label class="control-label">Last Name</label>
+                                                        <input id="last-name" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name"  />
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label class="control-label">Display Name</label>
+                                                        <span class="glyphicon glyphicon-lock"></span>
+                                                        <input id="display-name" maxlength="100" type="text" disabled required="required" class="form-control" placeholder="Enter Last Name" />
+                                                    </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                    <label for="gender">Gender</label>
+                                                    <select class="form-control" id="gender" required="required">
+                                                        <option value="" selected>Select a gender</option>
+                                                        <option value="Male" >Male</option>
+                                                        <option value="Female" >Female</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="dob">DOB</label>
+                                                    <div class="input-group date datepicker">
+                                                        <input type="text" class="form-control" id="dob" placeholder="select your dob" required="required"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="form-group col-sm-6">
+                                                        <label for="martialstatus">Martial Status</label>
+                                                        <select class="form-control" id="martialstatus" required="required">
+                                                            <option value="" selected>select your Status</option>
+                                                            <option value="single">Single</option>
+                                                            <option value="married">Married</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                            <label for="bloodgroup">Blood Group</label>
+                                                            <select class="form-control" id="bloodgroup" required="required">
+                                                                <option value="" selected>Select a blood group</option>
+                                                                <option value="O+ (O Positive)">O+ (O Positive)</option>
+                                                                <option value="O- (O Negative)">O- (O Negative)</option>
+                                                                <option value="A+ (A Positive)">A+ (A Positive)</option>
+                                                                <option value="A- (A Negative)">A- (A Negative)</option>
+                                                                <option value="B+ (B Positive)">B+ (B Positive)</option>
+                                                                <option value="B- (B Negative)">B- (B Negative)</option>
+                                                            </select>
+                                                        </div>
+                                                </div>
+
+                                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                        </div>
+                                        <!-- step 2 content-->
+                                        <div class="row setup-content" id="step-2">
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                        <label for="location">Prefered location</label>
+                                                        <select class="form-control" id="location" required="required">
+                                                            <option value="" selected>select your location</option>
+                                                            <option value="Hyderabad" >Hyderabad</option>
+                                                            <option value="Bangalore" >Bangalore</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                            <label for="department">Department</label>
+                                                            <select class="form-control" id="department" required="required">
+                                                                <option value="" selected>select your department</option>
+                                                                <option value="Professional Services" >Professional Services</option>
+                                                                <option value="Executive" >Executive</option>
+                                                                <option value="Sales" >Sales</option>
+                                                            </select>
+                                                    </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="form-group col-sm-6">
+                                                        <div class="flex-between">
+                                                            <label for="jobtitle">Job Title</label>
+                                                            <a id="edit-job-title" class="text-primary">Change</a>
+                                                        </div>
+                                                            <select class="form-control" id="jobtitle" disabled required="required">
+                                                                <option value="Web Designer" selected>Web Designer</option>
+                                                                <option value="Developer" >Developer</option>
+                                                                <option value="Analyst" >Analyst</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <label class="control-label">Secondary job title</label>
+                                                        <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter job title"  />
+                                                    </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                    <label class="control-label">Reports To</label>
+                                                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter job title"  />
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="dateofjoining">Date Of Joining</label>
+                                                    <div class="input-group date datepicker">
+                                                        <input type="text" class="form-control" id="dateofjoining" placeholder="select Date of joining" required="required"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                    <div class="flex-between">
+                                                        <label for="leaveplan">Leave Plan</label>
+                                                        <a id="edit-leave-plan" class="text-primary">Change</a>
+                                                    </div>
+                                                    <select class="form-control" id="leaveplan" disabled required="required">
+                                                        <option selected>Default Leave Plan</option>
+                                                        <option>Developer</option>
+                                                        <option></option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="probationend">Probation End Date</label>
+                                                    <div class="input-group date datepicker">
+                                                        <input type="text" class="form-control" id="probationend" placeholder="select probation end date" required="required" disabled><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                    <div class="flex-between">
+                                                        <label class="control-label">Attendance Number</label>
+                                                        <a id="edit-attendance-number" class="text-primary">Change</a>
+                                                    </div>
+                                                    <input  maxlength="100" type="number" id="attendance-number" required="required" class="form-control" placeholder="Enter Attendance number" value="1" disabled />
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                    <div class="flex-between">
+                                                        <label class="control-label">Employee Number</label>
+                                                        <a id="edit-employee-number" class="text-primary">Change</a>
+                                                    </div>
+                                                    <input  maxlength="100" id="employee-number" type="number" required="required" class="form-control" placeholder="Enter Employee number" value="1" disabled/>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                                        </div>
+                                        <!-- step 3 content-->
+                                        <div class="row setup-content" id="step-3">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <div class="flex-between border-bottom">
+                                                            <label for="professional-summary">Professional Summary</label>
+                                                            <a id="edit-professional-summary" href="#" class="text-primary">EDIT</a>
+                                                        </div>
+                                                        <textarea class="form-control" rows="5" disabled id="professional-summary"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                            <div class="flex-between border-bottom">
+                                                                <label for="experience">Experience</label>
+                                                                <a id="edit-experience" href="#" class="text-primary">EDIT</a>
+                                                            </div>
+                                                            <textarea class="form-control" rows="5" disabled id="experience"></textarea>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-lg pull-right" type="submit">SAVE</button>
+                                        </div>
+                                    </form>    
+                            </div>
+                        </div>
+                        <!-- accordion 2-->
+                        <button class="accordion"><span><b>Payslips</b></span></button>
+                        <div class="panel">
+                        </div>
+                        <!-- accordion 3-->
+                        <button class="accordion"><span><b>Attendance</b></span></button>
+                        <div class="panel">
+                        </div>
+                    </div>
+                    <!-- activity bar content-->
+                        <div class="col-sm-3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                <h3 class="m-0 text-primary">ACTIVITY</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="progress_bar">
+                                        <span>Personal details</span>
+                                        <div class="progress">
+                                                <div id="personal-details-progress-bar" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                0% Complete 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="progress_bar">
+                                            <span>Job Info</span>
+                                            <div class="progress">
+                                                <div id="job-info-progress-bar" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    0% Complete
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="progress_bar">
+                                            <span>Summary</span>
+                                            <div class="progress">
+                                                <div id="summary-progress-bar" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    0% Complete
+                                                </div>
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- work nav tab content-->
+                    <div id="work" class="tab-pane fade">
+                      <h3>Menu 1</h3>
+                    </div>
+                    <!-- messages nav tab content-->
+                    <div id="messages" class="tab-pane fade">
+                      <h3>Menu 2</h3>
+                    </div>
+                </div>
+                
+                </div>    
+            
+        </div>
+    </div>
+    </body>
+</html>
